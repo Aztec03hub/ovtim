@@ -1,6 +1,9 @@
 # ovtim
 OMRON Visual Teach Interface Module
 
+# IMPORTANT!
+This is a fast, hard, and loose refactor. Some method and variable names will change to shortened versions. This repo is very much a work-in-progress. BE AWARE!
+
 ## Original Guide Via:
 https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864
 
