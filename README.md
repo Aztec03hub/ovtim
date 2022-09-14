@@ -22,7 +22,7 @@ NOTE: TESTS STILL NEED TO BE WRITTEN!
 From root directory, run `pytest -v`
 
 ## To Do:
-Lots, god damnit. Lots. But we're gonna create great things, mark my words.
+Lots, god damnit.. lots. But we're gonna create great things, mark my words.
 Add a config file manager/package of some sort.
 
 ## To Save Current Environment to `requirements.txt`:
