@@ -8,7 +8,7 @@ from fastapi.templating import Jinja2Templates
 from .library.readConfig import *
 
 # Import Routers
-from app.routers import managescanners, weblink
+from app.routers import managescanners, weblink, help
 
 # My Imports
 #from fastapi_socketio import SocketManager
@@ -32,6 +32,7 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Include our routers in the app
 app.include_router(managescanners.router)
 app.include_router(weblink.router)
+app.include_router(help.router)
 
 # Main App Routes
 @app.get("/", response_class=HTMLResponse)
