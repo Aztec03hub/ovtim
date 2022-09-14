@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %}DEBUGGING{% endblock %}</title>
+    <title>{% block title %}{% endblock %}</title>
     {% block head %}
     
     <!-- Favicon -->
@@ -33,10 +33,10 @@
         window.onload = function() {
             if (window.jQuery) {  
                 // jQuery is loaded  
-                alert("Yeah!");
+                alert("Yeah! jQuery is Loaded!");
             } else {
                 // jQuery is not loaded
-                alert("Doesn't Work");
+                alert("Doesn't Work... jQuery Not Loaded.");
             }
         }</script>
 </body>
