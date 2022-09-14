@@ -6,6 +6,10 @@ from fastapi.templating import Jinja2Templates
 
 # Import Helpers
 from .library.readConfig import *
+from .library.initLogging import *
+from .library.timeManager import *
+from .library.tryTelnetConn import *
+from .library.ethAutoDetect import *
 
 # Import Routers
 from app.routers import managescanners, weblink, help, settings
