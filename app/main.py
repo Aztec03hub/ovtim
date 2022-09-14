@@ -40,5 +40,4 @@ async def home(request: Request):
 # Other Routes
 @app.get("/page/{page_name}", response_class=HTMLResponse)
 async def page(request: Request, page_name: str):
-    data = openfile(page_name+".md")
-    return templates.TemplateResponse("page.html",  {"request": request, "data": data})
+    return templates.TemplateResponse("page.html",  {"request": request})

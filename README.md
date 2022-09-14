@@ -25,3 +25,8 @@ From root directory, run `pytest -v`
 ## To Do:
 Lots, god damnit. Lots. But we're gonna create great things, mark my words.
 Add a config file manager/package of some sort.
+
+## To Save Current Environment to `requirements.txt`:
+```shell
+pip list --format=freeze > requirements.txt
+```
