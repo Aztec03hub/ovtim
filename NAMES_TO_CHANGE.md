@@ -1,3 +1,3 @@
-`TimeManager` to `timeManager` 
-`testTelnetConn` to `tryTelnetConn`
-`ethernetAutoDetect` to `ethAutoDetect`
+`TimeManager` to `timeManager`  
+`testTelnetConn` to `tryTelnetConn`  
+`ethernetAutoDetect` to `ethAutoDetect`  
