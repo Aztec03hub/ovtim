@@ -3,7 +3,7 @@ OMRON Visual Teach Interface Module
 
 # IMPORTANT!
 This is a fast, hard, and loose refactor. Some method and variable names will change to shortened versions. This repo is very much a work-in-progress. BE AWARE!  
-Please see [NAMES_TO_CHANGE.md](https://duckduckgo.com) for list of methods/functions/variables which still need to be changed.
+Please see [NAMES_TO_CHANGE.md](https://github.com/Aztec03hub/ovtim/blob/main/NAMES_TO_CHANGE.md) for list of methods/functions/variables which still need to be changed.
 
 ## Original Guide Via:
 https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864
