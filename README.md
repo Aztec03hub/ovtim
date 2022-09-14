@@ -2,7 +2,8 @@
 OMRON Visual Teach Interface Module
 
 # IMPORTANT!
-This is a fast, hard, and loose refactor. Some method and variable names will change to shortened versions. This repo is very much a work-in-progress. BE AWARE!
+This is a fast, hard, and loose refactor. Some method and variable names will change to shortened versions. This repo is very much a work-in-progress. BE AWARE!  
+Please see [NAMES_TO_CHANGE.md](https://duckduckgo.com) for list of methods/functions/variables which still need to be changed.
 
 ## Original Guide Via:
 https://levelup.gitconnected.com/building-a-website-starter-with-fastapi-92d077092864
@@ -18,12 +19,12 @@ uvicorn app.main:app --reload --port 8080
 ```
 
 ## To Test:
-NOTE: TESTS STILL NEED TO BE WRITTEN!
+NOTE: TESTS STILL NEED TO BE WRITTEN!  
 From root directory, run `pytest -v`
 
 ## To Do:
-Lots, god damnit.. lots. But we're gonna create great things, mark my words.
-Add a config file manager/package of some sort.
+Lots, god damnit.. lots. But we're gonna create great things, mark my words.  
+Add a config file manager/package of some sort. Elegance is key.
 
 ## To Save Current Environment to `requirements.txt`:
 ```shell
