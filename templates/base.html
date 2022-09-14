@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}DEBUGGING{% endblock %}</title>
+    {% block head %}
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', path='/img/favicon.ico') }}" sizes="32x32"/>
+
+    {% block stylesheets %}
+    <!-- Custom CSS -->
+    <link href="{{ url_for('static', path='/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/bootstrap-table.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/all.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/omronstyles.css') }}" rel="stylesheet">
+    {% endblock stylesheets %}
+    
+    {% endblock %}
+</head>
+<body>
+    {% block content %}{% endblock %}
+
+    {% block scripts %}
+    <!-- Static Javascript -->
+    <script src="{{ url_for('static', path='/js/jquery-3.6.0.min.js') | safe}}"></script>
+    <script src="{{ url_for('static', path='/js/bootstrap.bundle.min.js') | safe }}"></script>
+    <script src="{{ url_for('static', path='/js/bootstrap-table.min.js') | safe }}"></script>
+    <script src="{{ url_for('static', path='/js/socket.io.min.js') | safe }}"></script>
+    {% endblock %}
+
+    <!-- Custom Javascript -->
+    <script type="text/javascript">
+        window.onload = function() {
+            if (window.jQuery) {  
+                // jQuery is loaded  
+                alert("Yeah!");
+            } else {
+                // jQuery is not loaded
+                alert("Doesn't Work");
+            }
+        }</script>
+</body>
+
+</html>
