@@ -17,12 +17,8 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload --port 8080
 ```
 
-## STAY AWARE:
-add this to git!
-add .gitignore!
-add the .env file to the .gitignore file!
-
 ## To Test:
+NOTE: TESTS STILL NEED TO BE WRITTEN!
 From root directory, run `pytest -v`
 
 ## To Do:
