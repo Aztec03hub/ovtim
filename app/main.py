@@ -16,7 +16,7 @@ from app.routers import managescanners, weblink, help, settings
 # My Imports
 #from fastapi_socketio import SocketManager
 import app.library.config as config
-import app.library.initLogging as logging
+import app.library.initLogging as logger
 
 # Import Helpers
 from .library.readConfig import *
@@ -28,8 +28,14 @@ from .library.ethAutoDetect import *
 app = FastAPI()
 
 ##### Main Initialization Section
+# Initialize configuration
 config.init()
-logging.init()
+
+# Initialize Application Logger
+app.log = logger.init(cfg.appLog)
+
+# Initialize Barcode Logger
+bcLog = logger.init(cfg.bcLog)
 
 ##### End of Main Initialization Section
 

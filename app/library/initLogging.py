@@ -2,16 +2,45 @@ import os
 import logging
 import logging.config
 import logging.handlers
-import app.main as app
 
-def init():
+def init(cfg):
+    #print('[initLogging] cfg:', cfg)
+
     # Check if logging path exists. If not, create it
-    logPath = os.path.abspath(os.getcwd()) + "\logs" + app.cfg.appLog['path']
+    logPath = os.path.abspath(os.getcwd()) + '\logs' + cfg['path']
     #print('[initLogging] logPath:', logPath)
-
     if not os.path.exists(logPath):
         os.makedirs(logPath)
 
+    # Create Logger and set Log Level
+    loggerName = cfg['filename'].split('.',1)[0]
+    #print('[initLogging] loggerName:', loggerName)
+    logger = logging.getLogger(loggerName)
+    logger.setLevel(cfg['loglevel'])
+
+    # Create Log Handler
+    handler = logging.handlers.TimedRotatingFileHandler(
+        filename = logPath + '/' + cfg['filename'],
+        when = 'midnight',
+        backupCount = cfg['logrotatecount']
+    )
+
+    # Create Log Formatter
+    formatter = logging.Formatter(
+        fmt = cfg['logmsgformat'],
+        datefmt = cfg['logdateformat']
+    )
+
+    # Add Formatter to Handler
+    handler.setFormatter(formatter)
+
+    # Add Handler to Logger
+    logger.addHandler(handler)
+
+    # Output Initial Log Message
+    logger.critical('Logging started for ' + loggerName)
+
+    return logger
 
 
 # initialize logging
