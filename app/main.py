@@ -1,24 +1,37 @@
+from distutils.command.config import config
+import os
+import configparser
 from unicodedata import name
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-# Import Helpers
-from .library.readConfig import *
-from .library.initLogging import *
-from .library.timeManager import *
-from .library.tryTelnetConn import *
-from .library.ethAutoDetect import *
+# Globals
+global cfg
 
 # Import Routers
 from app.routers import managescanners, weblink, help, settings
 
 # My Imports
 #from fastapi_socketio import SocketManager
+import app.library.config as config
+import app.library.initLogging as logging
+
+# Import Helpers
+from .library.readConfig import *
+from .library.timeManager import *
+from .library.tryTelnetConn import *
+from .library.ethAutoDetect import *
 
 # Create App
 app = FastAPI()
+
+##### Main Initialization Section
+config.init()
+logging.init()
+
+##### End of Main Initialization Section
 
 # Pass App into SocketManager
 #socket_manager = SocketManager(app=app)

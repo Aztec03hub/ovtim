@@ -1,6 +1,18 @@
 import os
 import logging
+import logging.config
 import logging.handlers
+import app.main as app
+
+def init():
+    # Check if logging path exists. If not, create it
+    logPath = os.path.abspath(os.getcwd()) + "\logs" + app.cfg.appLog['path']
+    #print('[initLogging] logPath:', logPath)
+
+    if not os.path.exists(logPath):
+        os.makedirs(logPath)
+
+
 
 # initialize logging
 # returns configured logger object
